@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupo Palominos - Menú Digital</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+  <header>
+    <div class="header-left">
+      <button class="btn-menu-toggle" onclick="openMenu()">
+        ☰ <span class="btn-text">MENÚ</span>
+      </button>
+      <img src="img/logotipo.jpeg" alt="Grupo Palominos Logo" class="header-logo" onclick="showSection('home')">
+    </div>
+
+    <div class="header-title" onclick="showSection('home')">
+      GRUPO PALOMINOS
+    </div>
+
+    <div class="header-location">
+      Insurgentes<br><small>CDMX</small>
+    </div>
+  </header>
+
+  <nav class="side-nav" id="sideNav">
+    <div class="side-nav-header">
+      <img src="img/logotipo.jpeg" alt="Palominos" class="drawer-logo">
+      <button class="close-btn" onclick="closeMenu()">&times;</button>
+    </div>
+    <ul class="side-nav-links">
+      <li><a href="#" onclick="showSection('home')" class="active-link">Inicio</a></li>
+      <li><a href="#" onclick="showSection('alimentos')">Alimentos</a></li>
+      <li><a href="#" onclick="showSection('mixologia')">Mixología</a></li>
+      <li><a href="#" onclick="showSection('postres')">Postres</a></li>
+      <li><a href="#" onclick="showSection('bebidas')">Bebidas</a></li>
+      <li><a href="#" onclick="showSection('botanero')">Menú Botanero</a></li>
+      <li><a href="#" onclick="showSection('encuesta')">Encuesta</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+   <section id="home" class="page-section active">
+  <div class="slider-container">
+    <div class="slide active" style="background-image: url('img/cortes.jpeg');">
+      <div class="slide-caption">
+        <h2>Cortes Finos al Carbón de Mezquite</h2>
+        <p>Tradición y sabor característico de Sonora</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('img/mixologia.jpeg');">
+      <div class="slide-caption">
+        <h2>Mixología de Autor</h2>
+        <p>Bebidas artesanales para el maridaje perfecto</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('img/ambiente.jpeg');">
+      <div class="slide-caption">
+        <h2>El Mejor Ambiente de la Ciudad</h2>
+        <p>Ubicados estratégicamente en la zona de Insurgentes</p>
+      </div>
+    </div>
+  </div>
+
+      <div class="about-card">
+        <h2>RESTAURANTE PALOMINOS</h2>
+        <p>
+          Con más de 40 años de tradición culinaria, <strong>Palominos</strong> trae a la Ciudad de México el auténtico sabor del norte. Nos especializamos en la selección de los mejores cortes de carne de ganado joven, asados a la perfección sobre brasas de carbón de mezquite que brindan un aroma y jugosidad inconfundibles.
+        </p>
+        <p>
+          Acompañe su experiencia con nuestras tradicionales tortillas de agua hechas a mano, frijoles maneados, guacamole fresco y una selecta carta de vinos y mixología de autor.
+        </p>
+        <div style="margin-top: 20px;">
+          <span class="badge-location">Sucursal Insurgentes - Ciudad de México</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="alimentos" class="page-section">
+      <h2 class="section-title">Alimentos</h2>
+      <p class="section-subtitle">Nuestros cortes y platillos insignia de la tradición sonorense</p>
+      
+      <div class="grid-container">
+        <div class="card">
+          <img src="img/rib.webp" alt="Rib Eye Sonorense" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Rib Eye Sonorense</h3>
+            <p class="card-desc">Corte jugoso de 400g asado al carbón de mezquite con sal de grano refinada.</p>
+            <div class="card-footer"><span class="card-price">$690 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/tomahack.webp" alt="Tomahawk Prime" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Tomahawk Prime</h3>
+            <p class="card-desc">Imponente corte de 1kg con hueso, ideal para compartir, extremadamente tierno.</p>
+            <div class="card-footer"><span class="card-price">$1,850 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/cabreria.webp" alt="Cabrería Tradicional" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Cabrería Tradicional</h3>
+            <p class="card-desc">Especialidad de la casa. Filete de res con hueso, suavidad y sabor inigualable.</p>
+            <div class="card-footer"><span class="card-price">$620 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/arrachera.webp" alt="Arrachera Prime" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Arrachera Prime</h3>
+            <p class="card-desc">300g de arrachera marinada en receta secreta de la casa, servida con chiles toreados.</p>
+            <div class="card-footer"><span class="card-price">$480 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/tacosfilete.jpg" alt="Tacos de Filete Palominos" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Tacos de Filete (3 uds)</h3>
+            <p class="card-desc">En tortilla de harina sobaquera con queso asadero fundido y aguacate.</p>
+            <div class="card-footer"><span class="card-price">$340 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/newyork.webp" alt="New York Steak" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">New York Steak</h3>
+            <p class="card-desc">Corte magro de 350g con ligera capa de grasa exterior que acentúa su sabor.</p>
+            <div class="card-footer"><span class="card-price">$590 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/filete.jpg" alt="Filete Mignon" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Filete Mignon</h3>
+            <p class="card-desc">Medallón de filete envuelto en tocino ahumado sobre reducción de vino tinto.</p>
+            <div class="card-footer"><span class="card-price">$650 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/costillar.webp" alt="Costillar de Cerdo BBQ" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Costillar de Cerdo BBQ</h3>
+            <p class="card-desc">Lentamente horneadas por 6 horas y glaseadas con salsa barbacoa artesanal.</p>
+            <div class="card-footer"><span class="card-price">$510 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/parrillada.jpg"" alt="Parrillada Mixta Palominos" class="card-img">
+          <div class="card-content">
+            <h3 class="card-title">Parrillada Mixta Palominos</h3>
+            <p class="card-desc">Combinación de Cabrería, Arrachera, Chistorra y Queso Fundido. Para 2 personas.</p>
+            <div class="card-footer"><span class="card-price">$1,250 MXN</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mixologia" class="page-section">
+      <h2 class="section-title">Mixología</h2>
+      <p class="section-subtitle">Cócteles autorales inspirados en destilados mexicanos</p>
+      <div class="grid-container">
+        <div class="card">
+          <img src="img/bacanorasour.avif" class="card-img" alt="Bacanora Sour">
+          <div class="card-content">
+            <h3 class="card-title">Bacanora Sour</h3>
+            <p class="card-desc">Destilado sonorense Bacanora, limón real, jarabe de agaves y clara de huevo.</p>
+            <div class="card-footer"><span class="card-price">$220 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/mezcalita.jpg" class="card-img" alt="Mezcalita Ahumada">
+          <div class="card-content">
+            <h3 class="card-title">Mezcalita Ahumada</h3>
+            <p class="card-desc">Mezcal espadín, jugo de maracuyá fresca y escarchado de sal de gusano.</p>
+            <div class="card-footer"><span class="card-price">$210 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/gin tonic.jpg" class="card-img" alt="Gin Tonic">
+          <div class="card-content">
+            <h3 class="card-title">Gin Tonic</h3>
+            <p class="card-desc">Ginebra infusionada con romero, frutos rojos y agua tónica de lavanda.</p>
+            <div class="card-footer"><span class="card-price">$240 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/old fashion.jpg" class="card-img" alt="Old Fashioned Sonorense">
+          <div class="card-content">
+            <h3 class="card-title">Old Fashioned Sonorense</h3>
+            <p class="card-desc">Whisky añejo, bitters de naranja y piloncillo ahumado con mezquite.</p>
+            <div class="card-footer"><span class="card-price">$260 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/margarita.jpg" class="card-img" alt="Margarita">
+          <div class="card-content">
+            <h3 class="card-title">Margarita</h3>
+            <p class="card-desc">Tequila reposado, licor de mora, carbón activado y escarchado de sal negra.</p>
+            <div class="card-footer"><span class="card-price">$230 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/paloma.jpg" class="card-img" alt="Paloma Imperial">
+          <div class="card-content">
+            <h3 class="card-title">Paloma Imperial</h3>
+            <p class="card-desc">Tequila blanco, refresco de toronja artesanal, infusión de flor de hibisco.</p>
+            <div class="card-footer"><span class="card-price">$210 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/carrajillo.jpg" class="card-img" alt="Carajillo Palominos">
+          <div class="card-content">
+            <h3 class="card-title">Carajillo Palominos</h3>
+            <p class="card-desc">Licor 43, espresso recién extraído y espuma helada de canela.</p>
+            <div class="card-footer"><span class="card-price">$220 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/mojito.jpg" class="card-img" alt="Mojito de Moras">
+          <div class="card-content">
+            <h3 class="card-title">Mojito de Moras</h3>
+            <p class="card-desc">Ron blanco, menta fresca, zarzamoras machacadas y soda artesanal.</p>
+            <div class="card-footer"><span class="card-price">$195 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/cantarito.png" class="card-img" alt="Cantarito del Norte">
+          <div class="card-content">
+            <h3 class="card-title">Cantarito del Norte</h3>
+            <p class="card-desc">Cítricos frescos (naranja, toronja, limón), tequila añejo y sal de mar en barro.</p>
+            <div class="card-footer"><span class="card-price">$250 MXN</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="postres" class="page-section">
+      <h2 class="section-title">Postres</h2>
+      <p class="section-subtitle">El toque dulce perfecto para finalizar su banquete</p>
+      <div class="grid-container">
+        <div class="card">
+          <img src="img/coyota.webp" class="card-img" alt="Coyota con Nieve">
+          <div class="card-content">
+            <h3 class="card-title">Coyota con Nieve</h3>
+            <p class="card-desc">Tradicional coyota sonorense de piloncillo servida tibia con helado de vainilla.</p>
+            <div class="card-footer"><span class="card-price">$160 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/pastelchocolate.avif" class="card-img" alt="Pastel de Chocolate">
+          <div class="card-content">
+            <h3 class="card-title">Pastel de Chocolate Ahumado</h3>
+            <p class="card-desc">Bizcocho de chocolate semi-amargo con toque suave de carbón y frutos rojos.</p>
+            <div class="card-footer"><span class="card-price">$180 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/flan.jpg" class="card-img" alt="Flan Napolitano">
+          <div class="card-content">
+            <h3 class="card-title">Flan Napolitano de Queso</h3>
+            <p class="card-desc">Textura cremosa con caramelo dorado e infusión de vainilla de papantla.</p>
+            <div class="card-footer"><span class="card-price">$140 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/helado.jpg" class="card-img" alt="Helado Artesanal">
+          <div class="card-content">
+            <h3 class="card-title">Trio de Helados Artesanales</h3>
+            <p class="card-desc">Sabores regionales: Pinole, Vainilla de Papantla y Cajeta de Leche de Cabra.</p>
+            <div class="card-footer"><span class="card-price">$130 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/pan elote.avif" class="card-img" alt="Pan de Elote">
+          <div class="card-content">
+            <h3 class="card-title">Pan de Elote Tibio</h3>
+            <p class="card-desc">Servido en sartén de hierro con rompopes artesanales y nuez garapiñada.</p>
+            <div class="card-footer"><span class="card-price">$170 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/guayaba.jpg" class="card-img" alt="Cheesecake de Guayaba">
+          <div class="card-content">
+            <h3 class="card-title">Cheesecake de Guayaba</h3>
+            <p class="card-desc">Base de galleta crujiente y mermelada casera de guayaba a la canela.</p>
+            <div class="card-footer"><span class="card-price">$175 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/volcan.jpg" class="card-img" alt="Volcán de Dulce de Leche">
+          <div class="card-content">
+            <h3 class="card-title">Volcán de Cajeta</h3>
+            <p class="card-desc">Pastel suave de vainilla con centro fluido de cajeta horneada al momento.</p>
+            <div class="card-footer"><span class="card-price">$190 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/churros.jpg" class="card-img" alt="Churros Gourmet">
+          <div class="card-content">
+            <h3 class="card-title">Churros Gourmet (5 pcs)</h3>
+            <p class="card-desc">Espolvoreados con azúcar-canela, acompañados de dip de chocolate y cajeta.</p>
+            <div class="card-footer"><span class="card-price">$150 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/crepas.png" class="card-img" alt="Crepas Flameadas">
+          <div class="card-content">
+            <h3 class="card-title">Crepas Flameadas</h3>
+            <p class="card-desc">Crepas delgadas bañadas en salsa de licor de naranja y cajeta flameada en mesa.</p>
+            <div class="card-footer"><span class="card-price">$200 MXN</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bebidas" class="page-section">
+      <h2 class="section-title">Bebidas</h2>
+      <p class="section-subtitle">Refrescos, limonadas, café e infusiones</p>
+      <div class="grid-container">
+        <div class="card">
+          <img src="img/jengibre.jpg" class="card-img" alt="Limonada">
+          <div class="card-content">
+            <h3 class="card-title">Limonada Menta-Jengibre</h3>
+            <p class="card-desc">Preparada al momento con limones colima y toque fresco de menta.</p>
+            <div class="card-footer"><span class="card-price">$75 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/naranjada.avif" class="card-img" alt="Naranjada Natural">
+          <div class="card-content">
+            <h3 class="card-title">Naranjada Mineral</h3>
+            <p class="card-desc">Jugo natural de naranja recién exprimido con agua mineral de manantial.</p>
+            <div class="card-footer"><span class="card-price">$75 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/horchata.jpg" class="card-img" alt="Agua de Horchata">
+          <div class="card-content">
+            <h3 class="card-title">Agua de Horchata Artesanal</h3>
+            <p class="card-desc">Receta artesanal con arroz, canela y leche concentrada.</p>
+            <div class="card-footer"><span class="card-price">$65 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/jamaica romero.jpg" class="card-img" alt="Agua de Jamaica">
+          <div class="card-content">
+            <h3 class="card-title">Agua de Jamaica con Romero</h3>
+            <p class="card-desc">Flor de jamaica concentrada infusionada con romero fresco.</p>
+            <div class="card-footer"><span class="card-price">$65 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/americano.avif" class="card-img" alt="Café Americano">
+          <div class="card-content">
+            <h3 class="card-title">Café Americano Gourmet</h3>
+            <p class="card-desc">Mezcla de granos de altura de Oaxaca y Chiapas, tueste medio.</p>
+            <div class="card-footer"><span class="card-price">$60 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/esspreso.webp" class="card-img" alt="Espresso Doble">
+          <div class="card-content">
+            <h3 class="card-title">Espresso Doble</h3>
+            <p class="card-desc">Extracción intensa con crema consistente y notas a chocolate amargo.</p>
+            <div class="card-footer"><span class="card-price">$70 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/te.jpg" class="card-img" alt="Té Herbal">
+          <div class="card-content">
+            <h3 class="card-title">Té Herbal Seleccionado</h3>
+            <p class="card-desc">Variedad de infusiones orgánicas: Manzanilla, Menta, Verde o Manzana-Canela.</p>
+            <div class="card-footer"><span class="card-price">$65 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/refrescos.jpg" class="card-img" alt="Refrescos">
+          <div class="card-content">
+            <h3 class="card-title">Refrescos</h3>
+            <p class="card-desc">Línea Coca-Cola (Regular, Light, Zero), Sprite, Mundet o Sidral 355ml.</p>
+            <div class="card-footer"><span class="card-price">$55 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/mineral.jpg" class="card-img" alt="Agua Perrier">
+          <div class="card-content">
+            <h3 class="card-title">Agua Mineral de Manantial (750ml)</h3>
+            <p class="card-desc">Servida fría con rodajas de cítricos a elección.</p>
+            <div class="card-footer"><span class="card-price">$110 MXN</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="botanero" class="page-section">
+      <h2 class="section-title">Menú Botanero</h2>
+      <p class="section-subtitle">Entradas al centro para compartir e iniciar la experiencia</p>
+      <div class="grid-container">
+        <div class="card">
+          <img src="img/frijoles.avif" class="card-img" alt="Frijoles Maneados">
+          <div class="card-content">
+            <h3 class="card-title">Frijoles Maneados </h3>
+            <p class="card-desc">Frijoles refritos con queso menonita frito y trozos de chicharrón crujiente.</p>
+            <div class="card-footer"><span class="card-price">$190 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/queso.jpg" class="card-img" alt="Queso Fundido">
+          <div class="card-content">
+            <h3 class="card-title">Queso Fundido con Chorizo</h3>
+            <p class="card-desc">Queso regional gratinado acompañado de tortillas de harina recién hechas.</p>
+            <div class="card-footer"><span class="card-price">$210 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/guacamole.jpg" class="card-img" alt="Guacamole Palominos">
+          <div class="card-content">
+            <h3 class="card-title">Guacamole con Chicharrón de rib bye</h3>
+            <p class="card-desc">Aguacate Hass martajado al momento con cilantro, cebolla y queso fresco.</p>
+            <div class="card-footer"><span class="card-price">$180 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/chinchulines.jpg" class="card-img" alt="Chinchulines">
+          <div class="card-content">
+            <h3 class="card-title">Chinchulines a la Parrilla</h3>
+            <p class="card-desc">Trenzados y dorados a las brasas de mezquite con sal marina y salsa verde.</p>
+            <div class="card-footer"><span class="card-price">$260 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/molletes.jpg" class="card-img" alt="Molletes Sonorenses">
+          <div class="card-content">
+            <h3 class="card-title">Molletes Sonorenses (4 pcs)</h3>
+            <p class="card-desc">Pan rústico con frijoles manejados, queso asadero gratinado y machaca fina.</p>
+            <div class="card-footer"><span class="card-price">$220 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/quesadillas.jpg" class="card-img" alt="Quesadillas en Harina">
+          <div class="card-content">
+            <h3 class="card-title">Quesadillas Sobaqueras (3 pcs)</h3>
+            <p class="card-desc">Enorme tortilla de harina tradicional doblada con queso menonita frito.</p>
+            <div class="card-footer"><span class="card-price">$230 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/tuetano.webp" class="card-img" alt="Tuétanos a la Parrilla">
+          <div class="card-content">
+            <h3 class="card-title">Tuétanos a la Parrilla (3 pcs)</h3>
+            <p class="card-desc">Huesos de canoa horneados al carbón acompañados de tortilla sobaquera.</p>
+            <div class="card-footer"><span class="card-price">$320 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/machaca.jpg" class="card-img" alt="Machaca Seca">
+          <div class="card-content">
+            <h3 class="card-title">Machaca Seca Especial</h3>
+            <p class="card-desc">Carne seca de res deshebrada sonorense acompañada de salsa de chiltepín.</p>
+            <div class="card-footer"><span class="card-price">$290 MXN</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/chistorra.webp" class="card-img" alt="Chorizo Criollo">
+          <div class="card-content">
+            <h3 class="card-title">Chistorra y Chorizo Asado</h3>
+            <p class="card-desc">Servidos sobre comal caliente con chiles toreados y limones salados.</p>
+            <div class="card-footer"><span class="card-price">$240 MXN</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="encuesta" class="page-section">
+      <h2 class="section-title">Encuesta de Opinión</h2>
+      <p class="section-subtitle">Tu experiencia en Grupo Palominos Insurgentes nos importa</p>
+      
+      <form class="survey-form" onsubmit="submitSurvey(event)" action="encuesta.php" method="post">
+        <div class="form-group">
+          <label>Nombre Completo:</label>
+          <input type="text" required placeholder="Tu nombre" name="NOMBRE">
+        </div>
+        
+        <div class="form-group">
+          <label>Mesa / Número de Comanda:</label>
+          <input type="text" placeholder="Ej. Mesa 12" name="MESA">
+        </div>
+
+        <div class="form-group">
+          <label>¿Cómo evalúas el servicio y alimentos?</label>
+          <div class="star-rating">
+            <span onclick="setRating(1)">★</span>
+            <span onclick="setRating(2)">★</span>
+            <span onclick="setRating(3)">★</span>
+            <span onclick="setRating(4)">★</span>
+            <span onclick="setRating(5)">★</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Comentarios adicionales:</label>
+          <textarea rows="4" placeholder="Cuéntanos más sobre tu visita..." name="COMENTARIOS"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">ENVIAR ENCUESTA</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Grupo Palominos - Insurgentes, Ciudad de México. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
